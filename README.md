@@ -2,6 +2,9 @@
 
 This script is used to generate a SPIFFS image from a data folder and upload it to an ESP32 chip.
 
+uploading files to the ESP modules, such as HTML, CSS, JavaScript, and other resources, involves using a feature called SPIFFS (SPI Flash File System) or LittleFS. These filesystems allow you to store and serve files directly from the module's Flash memory, eliminating the need for an external SD card. 
+Here's a script to upload files to ESP devices.
+
 ## Variables and Options
 
 - `DATA_FOLDER`: The directory containing the data to be included in the SPIFFS image.
@@ -15,13 +18,19 @@ This script is used to generate a SPIFFS image from a data folder and upload it 
 - `BAUD_RATE`: The baud rate for the upload.
 - `FLASH_ADDRESS`: The address to write the SPIFFS image to.
 
+
 ## Usage
+Before running the script, you need to place all the files you want to include in the SPIFFS image in a folder named `data`. This folder should be in the same directory as the script. The script will take all the files in the `data` folder and include them in the SPIFFS image.
+
+The `data` folder can include any type of file, such as HTML, CSS, JavaScript, images, and other resources. The files in the `data` folder will be accessible from your ESP32 program using the SPIFFS or LittleFS APIs.
+
+*Please note that the total size of the files in the `data` folder should not exceed the `SPIFFS_SIZE` specified in the script.*
 
 Run the script with the chip type as the first argument. If no argument is provided, the chip type defaults to 'esp32'.
 
-```shell
+```
 ./esp-sketch-data-upload.sh <chip_type>
-
+```
 ## Dependencies
 
 This script relies on the following tools:
