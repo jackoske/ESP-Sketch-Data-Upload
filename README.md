@@ -1,6 +1,8 @@
 ESP8266/ESP32 Filesystem Upload Script
 
 BEFORE USING CONSIDER USING THIS :-) found after I made this!
+https://github.com/earlephilhower/arduino-esp8266littlefs-plugin?tab=readme-ov-file
+
 
 This script generates a filesystem image (SPIFFS or LittleFS) from a data folder and uploads it to an ESP8266 or ESP32 chip.
 
