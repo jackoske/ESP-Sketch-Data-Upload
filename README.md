@@ -1,4 +1,7 @@
 ESP8266/ESP32 Filesystem Upload Script
+
+BEFORE USING CONSIDER USING THIS :-) found after I made this!
+
 This script generates a filesystem image (SPIFFS or LittleFS) from a data folder and uploads it to an ESP8266 or ESP32 chip.
 
 Uploading files to ESP modules, such as HTML, CSS, JavaScript, and other resources, involves using a feature called SPIFFS (SPI Flash File System) or LittleFS. These filesystems allow you to store and serve files directly from the module's Flash memory, eliminating the need for an external SD card. Here's a script to upload files to ESP devices.
